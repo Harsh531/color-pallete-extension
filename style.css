@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    background: #f1f1f1;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Helvetica", sans-serif;
+    padding: 0 2rem;
+}
+
+.pallete button {
+    outline: none;
+    border: none;
+    padding: .7rem 2rem;
+    font-size: 1.1rem;
+    position: absolute;
+    top: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2rem;
+    background: #1f1f1f;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 1rem;
+    cursor: pointer;
+    transition: all .4s ;
+}
+.pallete button:hover {
+    color: #1f1f1f;
+    background: #fff;
+    box-shadow: 0 0 15px rgba(0,0,0,.2);
+}
+
+.pallete .copy-message {
+    transition: all .4s;
+}
+.pallete .copy-message .hidden{
+    display: none;
+
+}
+.message-visible {
+    display: block;
+    border: none;
+    padding : .5rem 2rem;
+    margin-top: -25px;
+    border-radius: 20px;
+    background: cadetblue;
+    color: #fff;
+    text-align: center;
+    line-height: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transition: all .4s;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 5rem;
+    z-index: 9999;
+}
+
+.pallete {
+    position: relative;
+    background: #fff;
+    width: 45rem;
+    height: 25rem;
+    border-radius: 20px;
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,.2);
+    text-align: center;
+    color: #1f1f1f;
+    padding-top: 5rem;
+    box-sizing: border-box;
+}
+
+.colors {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    border-radius: 20px;
+    overflow-y: hidden;
+    height: 100vh;
+    border-radius: 0 0 20px 20px;
+    transition: all .4s;
+}
+
+.colors > div {
+    width: 25%;
+    letter-spacing: 2px;
+}
+
+.colors .hex:hover {
+    cursor: pointer;
+    color: rgba(0,0,0,.3) !important;
+}
+
+.color {
+    background: #ccc;
+    height: 17rem;
+    width: 100%;
+}
+
+.color h4 {
+    font-size: .9rem;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fade-In .4s ease-in;
+}
+
+@media screen and (max-width : 500px) {
+    body {padding: 2rem;}
+    .pallete {height: initial;margin-top: 5rem;}
+    .colors {flex-direction: column;overflow-y: scroll;}
+    .colors > div {width: 100%;}
+
+}
+
+@keyframes fade-In {
+    to {opacity: 1;}
+}
